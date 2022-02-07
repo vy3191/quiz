@@ -52,4 +52,11 @@ public class Quiz {
         return pctScore + "%";
     }
 
+    public int getPointTotal() {
+        return pointTotal;
+    }
+
+    public int getUserScore() {
+        return userScore;
+    }
 }

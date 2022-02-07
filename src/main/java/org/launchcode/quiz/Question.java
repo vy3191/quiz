@@ -17,7 +17,7 @@ public class Question {
         this.answer = answer;
     }
 
-    public Question(String text, String response, String answer, int pointValue) {
+    public Question(String text, String answer, int pointValue) {
         this(text, answer);
         this.pointValue = pointValue;
     }
