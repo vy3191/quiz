@@ -1,2 +1,3 @@
 rootProject.name = 'quiz'
+include 'java'
 
