@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Quiz {
 
-    private final ArrayList<Question> questions = new ArrayList<>();
+    private final ArrayList<Question> questions = new ArrayList<Question>();
     private int pointTotal = 0;
     private int userScore = 0;
 

@@ -10,11 +10,11 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestQuestion {
 
-    private Question testQuestion;
+    private ShortAnswerQuestion testQuestion;
 
     @Before
     public void setUp() {
-        testQuestion = new Question("What are you?", "walrus", 4);
+        testQuestion = new ShortAnswerQuestion("What are you?", "walrus", 4);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class TestQuestion {
     }
 
     @Test
-    public void testGradeResponseCorrectlyGradesInorrectResponse() {
+    public void testGradeResponseCorrectlyGradesIncorrectResponse() {
         testQuestion.setResponse("giraffe");
         int grade = testQuestion.gradeResponse();
         assertEquals(0, grade);

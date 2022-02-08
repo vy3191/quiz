@@ -14,7 +14,7 @@ public class TestQuiz {
         Quiz quiz = new Quiz();
         assertEquals(0, quiz.getPointTotal());
         int questionValue = 7;
-        Question question = new Question ("Blah blah blah", "yak yak yak", questionValue);
+        ShortAnswerQuestion question = new ShortAnswerQuestion("Blah blah blah", "yak yak yak", questionValue);
         quiz.addQuestion(question);
         assertEquals(questionValue, quiz.getPointTotal());
     }
