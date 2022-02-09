@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by Chris Bay
  */
-public class Quiz {
+public class Quiz implements Gradeable {
 
     private final ArrayList<Question> questions = new ArrayList<Question>();
     private int pointTotal = 0;
@@ -42,12 +42,17 @@ public class Quiz {
 
         input.close();
 
-        System.out.println("\nYour score: " + this.userScore + "/" + this.pointTotal + " (" + this.getScorePercentage() + ")");
+        System.out.println("\nYour score: " + this.userScore + "/" + this.pointTotal + " (" + this.getDisplayScorePercentage() + ")");
     }
 
     // returns something like 67% for 2/3
-    public String getScorePercentage() {
-        double pct = (double) this.userScore / (double) this.pointTotal;
+    public double getScorePercentage() {
+        return (double) this.userScore / (double) this.pointTotal;
+    }
+
+    @Override
+    public String getDisplayScorePercentage() {
+        double pct = this.getScorePercentage();
         long pctScore = Math.round(pct * 100);
         return pctScore + "%";
     }
