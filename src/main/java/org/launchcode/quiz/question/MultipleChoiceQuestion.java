@@ -1,11 +1,11 @@
-package org.launchcode.quiz;
+package org.launchcode.quiz.question;
 
 import java.util.Scanner;
 
 /**
  * Created by Chris Bay
  */
-public class MultipleChoiceQuestion extends Question {
+public class MultipleChoiceQuestion extends AbstractQuestion {
 
     private final String[] choices;
     private int response;
@@ -36,6 +36,7 @@ public class MultipleChoiceQuestion extends Question {
     @Override
     public void collectResponse(Scanner input) {
         this.response = input.nextInt();
+        input.nextLine();
     }
 
     @Override

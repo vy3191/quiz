@@ -1,4 +1,4 @@
-package org.launchcode.quiz;
+package org.launchcode.quiz.assignment;
 
 /**
  * Created by Chris Bay

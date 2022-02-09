@@ -1,11 +1,11 @@
-package org.launchcode.quiz;
+package org.launchcode.quiz.question;
 
 import java.util.Scanner;
 
 /**
  * Created by Chris Bay
  */
-public class TrueFalseQuestion extends Question {
+public class TrueFalseQuestion extends AbstractQuestion {
 
     private boolean response;
     private boolean answer;

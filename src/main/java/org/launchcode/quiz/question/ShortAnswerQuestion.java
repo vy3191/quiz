@@ -1,11 +1,11 @@
-package org.launchcode.quiz;
+package org.launchcode.quiz.question;
 
 import java.util.Scanner;
 
 /**
  * Created by Chris Bay
  */
-public class ShortAnswerQuestion extends Question {
+public class ShortAnswerQuestion extends AbstractQuestion {
 
     private String response;
     private String answer;

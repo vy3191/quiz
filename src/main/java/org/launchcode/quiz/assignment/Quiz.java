@@ -1,4 +1,6 @@
-package org.launchcode.quiz;
+package org.launchcode.quiz.assignment;
+
+import org.launchcode.quiz.question.AbstractQuestion;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,20 +10,20 @@ import java.util.Scanner;
  */
 public class Quiz implements Gradeable {
 
-    private final ArrayList<Question> questions = new ArrayList<Question>();
+    private final ArrayList<AbstractQuestion> questions = new ArrayList<AbstractQuestion>();
     private int pointTotal = 0;
     private int userScore = 0;
 
     public Quiz () {}
 
-    public Quiz (ArrayList<Question> questions) {
+    public Quiz (ArrayList<AbstractQuestion> questions) {
         this.questions.addAll(questions);
-        for (Question question : this.questions) {
+        for (AbstractQuestion question : this.questions) {
             this.pointTotal += question.getPointValue();
         }
     }
 
-    public void addQuestion(Question question) {
+    public void addQuestion(AbstractQuestion question) {
         this.questions.add(question);
         this.pointTotal += question.getPointValue();
     }
@@ -32,7 +34,7 @@ public class Quiz implements Gradeable {
         Scanner input = new Scanner(System.in);
 
         int currentQuestionNum = 1;
-        for (Question question : this.questions) {
+        for (AbstractQuestion question : this.questions) {
             System.out.print("\n" + currentQuestionNum + ". ");
             question.displayQuestion();
             question.collectResponse(input);

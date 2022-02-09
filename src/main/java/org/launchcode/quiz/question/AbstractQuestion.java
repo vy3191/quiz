@@ -1,20 +1,20 @@
-package org.launchcode.quiz;
+package org.launchcode.quiz.question;
 
 import java.util.Scanner;
 
 /**
  * Created by Chris Bay
  */
-public abstract class Question {
+public abstract class AbstractQuestion {
 
     private String text;
     private int pointValue = 1;
 
-    public Question (String text) {
+    public AbstractQuestion(String text) {
         this.text = text;
     }
 
-    public Question (String text, int pointValue) {
+    public AbstractQuestion(String text, int pointValue) {
         this.text = text;
         this.pointValue = pointValue;
     }

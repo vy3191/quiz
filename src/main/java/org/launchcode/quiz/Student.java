@@ -1,5 +1,7 @@
 package org.launchcode.quiz;
 
+import org.launchcode.quiz.assignment.Gradeable;
+
 import java.util.ArrayList;
 
 /**

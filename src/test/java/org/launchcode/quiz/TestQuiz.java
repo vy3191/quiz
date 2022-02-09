@@ -1,6 +1,8 @@
 package org.launchcode.quiz;
 
 import org.junit.Test;
+import org.launchcode.quiz.assignment.Quiz;
+import org.launchcode.quiz.question.ShortAnswerQuestion;
 
 import static org.junit.Assert.assertEquals;
 
