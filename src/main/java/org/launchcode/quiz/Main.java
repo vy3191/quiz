@@ -1,5 +1,6 @@
 package org.launchcode.quiz;
 
+import org.launchcode.quiz.assignment.AlgebraQuiz;
 import org.launchcode.quiz.assignment.Quiz;
 import org.launchcode.quiz.question.CheckboxQuestion;
 import org.launchcode.quiz.question.MultipleChoiceQuestion;
@@ -28,11 +29,20 @@ public class Main {
         int[] cbAnswers = {2, 3};
         quiz.addQuestion(new CheckboxQuestion("Which of the following are prime numbers?", cbChoices, cbAnswers));
 
-        quiz.runQuiz();
+//        quiz.runQuiz();
 
         double studentGrade = student.calculateGrade();
 
         System.out.println("The overall grade for " + student.getName() + " is " + studentGrade);
+        //Creating new assignment details.
+        AlgebraQuiz alQuiz = new AlgebraQuiz();
+
+        String[] algebraChoices1 ={"10", "-10", "0", "1"};
+        String[] algebraChoices2 ={"-9 or 9", "9", "-9", "1"};
+        alQuiz.addQuestion(new MultipleChoiceQuestion("Solve: x + 20 = 10", algebraChoices1, 1));
+        alQuiz.addQuestion(new MultipleChoiceQuestion("Solve: x^2 - 89 = 0", algebraChoices2, 0));
+
+        alQuiz.runAlQuiz();
     }
 
 }

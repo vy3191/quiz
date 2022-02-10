@@ -11,6 +11,7 @@ public abstract class AbstractQuestion {
     private int pointValue = 1;
 
     public AbstractQuestion(String text) {
+
         this.text = text;
     }
 
